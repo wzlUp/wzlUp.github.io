@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[demo blog]]></title>
+    <url>%2F2019%2F07%2F04%2Fdemo-blog%2F</url>
+    <content type="text"><![CDATA[测试增加版权信息测试文字测试文字]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F03%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>介绍帖</category>
+      </categories>
+      <tags>
+        <tag>hexo教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建hexo个人博客笔记]]></title>
+    <url>%2F2019%2F07%2F02%2F%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[准备环境需要安装node和git作为基础环境； 开始安装全局安装cnpm： 1npm install -g cnpm --registry=https://registry.npm.taobao.org 安装hexo环境： 1cnpm install -g hexo-cli 然后检查是否安装成功，查看版本号： 1hexo -v 安装hexo完成后，创建一个文件夹进行hexo的初始化操作： 1hexo init 常用命令首先要构建一下博客的静态页面： 1hexo g 启动hexo： 1hexo s 新建文章： 1hexo n &quot;我的第一篇博客&quot; 构建文章（把新建的文章更新上去）： 1hexo g 清理缓存： 1hexo clean 部署到github登录自己的github，然后新建一个仓库，此时需要注意一点，就是仓库的名称必须为自己的GitHub的昵称加github.io，比如我的wzlUp.github.io作为仓库名称。 打开本地的_config.yml文件，修改一下配置： 1234deploy: type: git repo: https://github.com/wzlUp/wzlUp.github.io.git branch: master 然后执行命令 hexo d 进行更新到GitHub的操作即可。]]></content>
+      <categories>
+        <category>笔记类</category>
+      </categories>
+      <tags>
+        <tag>hexo教程</tag>
+      </tags>
+  </entry>
+</search>
