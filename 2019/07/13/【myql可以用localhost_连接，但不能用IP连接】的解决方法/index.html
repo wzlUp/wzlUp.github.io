@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="mysql,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Brave Heart">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ron`s Blog">
-<meta property="og:url" content="http://blog.smartasc.cn/tags/hexo教程/index.html">
+<meta name="description" content="【myql可以用localhost 连接，但不能用IP连接】的解决方法MySQL localhost 连接，但不能用IP连接问题解决方案 1.打开cmd窗口，进入MySQL安装的bin目录 2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p 3.执行以下命令分配新用户： 1grant all privileges on *.* to &amp;apos;root&amp;apo">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【myql可以用localhost 连接，但不能用IP连接】的解决方法">
+<meta property="og:url" content="http://blog.smartasc.cn/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/index.html">
 <meta property="og:site_name" content="Ron`s Blog">
-<meta property="og:description" content="Brave Heart">
+<meta property="og:description" content="【myql可以用localhost 连接，但不能用IP连接】的解决方法MySQL localhost 连接，但不能用IP连接问题解决方案 1.打开cmd窗口，进入MySQL安装的bin目录 2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p 3.执行以下命令分配新用户： 1grant all privileges on *.* to &amp;apos;root&amp;apo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-13T08:49:01.110Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ron`s Blog">
-<meta name="twitter:description" content="Brave Heart">
+<meta name="twitter:title" content="【myql可以用localhost 连接，但不能用IP连接】的解决方法">
+<meta name="twitter:description" content="【myql可以用localhost 连接，但不能用IP连接】的解决方法MySQL localhost 连接，但不能用IP连接问题解决方案 1.打开cmd窗口，进入MySQL安装的bin目录 2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p 3.执行以下命令分配新用户： 1grant all privileges on *.* to &amp;apos;root&amp;apo">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.smartasc.cn/tags/hexo教程/">
+  <link rel="canonical" href="http://blog.smartasc.cn/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/">
 
 
 
 
 
-  <title>标签: hexo教程 | Ron`s Blog</title>
+  <title>【myql可以用localhost 连接，但不能用IP连接】的解决方法 | Ron`s Blog</title>
   
 
 
@@ -153,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/wzlUp" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,52 +291,290 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>hexo教程<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.smartasc.cn/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wzlUp">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ron`s Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/02/搭建hexo个人博客笔记/" itemprop="url">
-              
-                <span itemprop="name">搭建hexo个人博客笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">【myql可以用localhost 连接，但不能用IP连接】的解决方法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-02T21:23:56+08:00" content="2019-07-02">
-          07-02
-        </time>
-      </div>
+        <div class="post-meta">
 
-    </header>
-  </article>
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T15:52:45+08:00">
+                2019-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记类/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  175
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="【myql可以用localhost-连接，但不能用IP连接】的解决方法"><a href="#【myql可以用localhost-连接，但不能用IP连接】的解决方法" class="headerlink" title="【myql可以用localhost 连接，但不能用IP连接】的解决方法"></a>【myql可以用localhost 连接，但不能用IP连接】的解决方法</h1><p><em><code>MySQL localhost 连接，但不能用IP连接问题解决方案</code></em></p>
+<p>1.打开cmd窗口，进入MySQL安装的bin目录</p>
+<p>2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p</p>
+<p>3.执行以下命令分配新用户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;xxx&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>（ps：xxx是root的密码）</p>
+<p>4.执行完上述命令后用下面的命令刷新权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<p>5.之后关闭mysql服务，然后启动mysql服务，大功告成</p>
+<p>6.举个栗子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;123456&apos; with grant option;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
+  <p><span>本文标题:</span>【myql可以用localhost 连接，但不能用IP连接】的解决方法</p>
+  <p><span>文章作者:</span>wzlUp</p>
+  <p><span>发布时间:</span>2019年07月13日 - 15:52:45</p>
+  <p><span>最后更新:</span>2019年07月13日 - 16:49:01</p>
+  <p><span>原始链接:</span><a href="/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/" title="【myql可以用localhost 连接，但不能用IP连接】的解决方法">http://blog.smartasc.cn/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.smartasc.cn/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="wzlUp 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="wzlUp 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/13/前端JS导出excel【亲测可用、适配主流浏览器兼容性】/" rel="next" title="前端JS导出excel【亲测可用、适配主流浏览器兼容性】">
+                <i class="fa fa-chevron-left"></i> 前端JS导出excel【亲测可用、适配主流浏览器兼容性】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/13/docker常用命令笔记/" rel="prev" title="docker常用命令笔记">
+                docker常用命令笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -342,6 +582,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -362,8 +606,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -435,6 +688,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【myql可以用localhost-连接，但不能用IP连接】的解决方法"><span class="nav-number">1.</span> <span class="nav-text">【myql可以用localhost 连接，但不能用IP连接】的解决方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,6 +873,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
