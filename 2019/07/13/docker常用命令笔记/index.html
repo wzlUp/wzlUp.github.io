@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ron`s Blog">
 <meta property="og:description" content="docker常用命令笔记启动docker 1sudo service docker start  重启docker 1sudo service docker restart  关闭docker 1sudoservice docker stop  【镜像国内化】： 可以使用阿里云的镜像加速功能，进入控制台，获取docker加速的单独地址，{   “registry-mirrors”: [“https">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-13T08:16:39.000Z">
+<meta property="og:updated_time" content="2019-07-15T06:15:40.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker常用命令笔记">
 <meta name="twitter:description" content="docker常用命令笔记启动docker 1sudo service docker start  重启docker 1sudo service docker restart  关闭docker 1sudoservice docker stop  【镜像国内化】： 可以使用阿里云的镜像加速功能，进入控制台，获取docker加速的单独地址，{   “registry-mirrors”: [“https">
@@ -346,6 +346,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/容器技术栈/" itemprop="url" rel="index">
+                    <span itemprop="name">容器技术栈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -372,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  641
+                  640
                 </span>
               
 
@@ -450,11 +472,11 @@
 
 <p>释义：参数 -p 设置端口，–name 取名 ，-e MYSQL_ROOT_PASSWORD=123456 设置 账号为 root ，密码为 123456 ，-d 表示作为一个守护进程在后台运行。mysql:5.7.26(这个需要加版本号，否则下载最新版本)</p>
 <p>【docker安装tomcat】：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:8080 --name mytomcat tomcat:latest-p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:8080 --name mytomcat tomcat:latest</span><br></pre></td></tr></table></figure>
 
-<p>释义: 前边的8080是本机的端口，冒号后面的8080是docker容器的端口，tomcat默</p>
-<p>认是8080–name : 是给容器起一个别名，方便使用，不然docker会默认给容器一个</p>
-<p>随机字符串的名称</p>
+<p>释义: </p>
+<p>-p 前边的8080是本机的端口，冒号后面的8080是docker容器的端口，tomcat默认是8080</p>
+<p>–name : 是给容器起一个别名，方便使用，不然docker会默认给容器一个随机字符串的名称</p>
 <p>进入tomcat容器：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mytomcat bash</span><br></pre></td></tr></table></figure>
 
@@ -510,7 +532,7 @@
   <p><span>本文标题:</span>docker常用命令笔记</p>
   <p><span>文章作者:</span>wzlUp</p>
   <p><span>发布时间:</span>2019年07月13日 - 15:52:45</p>
-  <p><span>最后更新:</span>2019年07月13日 - 16:16:39</p>
+  <p><span>最后更新:</span>2019年07月15日 - 14:15:40</p>
   <p><span>原始链接:</span><a href="/2019/07/13/docker常用命令笔记/" title="docker常用命令笔记">http://blog.smartasc.cn/2019/07/13/docker常用命令笔记/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.smartasc.cn/2019/07/13/docker常用命令笔记/" aria-label="复制成功！"></i></span>
   </p>
@@ -586,8 +608,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/13/前端JS导出excel【亲测可用、适配主流浏览器兼容性】/" rel="next" title="前端JS导出excel【亲测可用、适配主流浏览器兼容性】">
-                <i class="fa fa-chevron-left"></i> 前端JS导出excel【亲测可用、适配主流浏览器兼容性】
+              <a href="/2019/07/13/【myql可以用localhost_连接，但不能用IP连接】的解决方法/" rel="next" title="【myql可以用localhost 连接，但不能用IP连接】的解决方法">
+                <i class="fa fa-chevron-left"></i> 【myql可以用localhost 连接，但不能用IP连接】的解决方法
               </a>
             
           </div>
@@ -684,7 +706,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
