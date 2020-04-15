@@ -12,17 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【myql可以用localhost 连接，但不能用IP连接】的解决方法]]></title>
-    <url>%2F2019%2F07%2F13%2F%E3%80%90myql%E5%8F%AF%E4%BB%A5%E7%94%A8localhost_%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E4%B8%8D%E8%83%BD%E7%94%A8IP%E8%BF%9E%E6%8E%A5%E3%80%91%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[【myql可以用localhost 连接，但不能用IP连接】的解决方法MySQL localhost 连接，但不能用IP连接问题解决方案 1.打开cmd窗口，进入MySQL安装的bin目录 2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p 3.执行以下命令分配新用户： 1grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;xxx&apos;; （ps：xxx是root的密码） 4.执行完上述命令后用下面的命令刷新权限 1flush privileges; 5.之后关闭mysql服务，然后启动mysql服务，大功告成 6.举个栗子 12grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;123456&apos; with grant option;flush privileges;]]></content>
-      <categories>
-        <category>笔记类</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[前端JS导出excel【亲测可用、适配主流浏览器兼容性】]]></title>
     <url>%2F2019%2F07%2F13%2F%E5%89%8D%E7%AB%AFJS%E5%AF%BC%E5%87%BAexcel%E3%80%90%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8%E3%80%81%E9%80%82%E9%85%8D%E4%B8%BB%E6%B5%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E3%80%91%2F</url>
     <content type="text"><![CDATA[前端JS导出excel【亲测可用、适配主流浏览器兼容性】一段可直接在前端js中跑的导出Excel的代码，亲测可用，可以简单方便的按自己的需求将数据导出。 该方式比较简洁高效，可以自定义导出的字段，导出前可处理每个字段的数据匹配值，值得大家一试。 可适配主流浏览器，运行稳定无异常问题。 可适配主流浏览器，运行稳定无异常问题。 可适配主流浏览器，运行稳定无异常问题。 重要的事情说三遍 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107/*** 获取浏览器类型* @return &#123;[type]&#125; [description]*/function getBroswerType() &#123; var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串 var isOpera = userAgent.indexOf(&quot;Opera&quot;) &gt; -1; //判断是否Opera浏览器 if (isOpera) &#123; return &quot;Opera&quot; &#125;; //判断是否Firefox浏览器 if (userAgent.indexOf(&quot;Firefox&quot;) &gt; -1) &#123; return &quot;FF&quot;; &#125; //判断是否chorme浏览器 if (userAgent.indexOf(&quot;Chrome&quot;) &gt; -1)&#123; return &quot;Chrome&quot;; &#125; //判断是否Safari浏览器 if (userAgent.indexOf(&quot;Safari&quot;) &gt; -1) &#123; return &quot;Safari&quot;; &#125; //判断是否IE浏览器 if (userAgent.indexOf(&quot;compatible&quot;) &gt; -1 &amp;&amp; userAgent.indexOf(&quot;MSIE&quot;) &gt; -1 &amp;&amp; !isOpera) &#123; return &quot;IE&quot;; &#125; //判断是否Edge浏览器 if (userAgent.indexOf(&quot;Trident&quot;) &gt; -1) &#123; return &quot;Edge&quot;; &#125;;&#125;// ----------------- 导出excel公共方法区【开始】 ----------------------var jsono = [];//这里的数据是用来定义导出的格式类型const wopts = &#123; bookType: &apos;xlsx&apos;, bookSST: false, type: &apos;binary&apos; &#125;;//如果使用 FileSaver.js 就不要同时使用以下函数//当然可以自定义简单的下载文件实现方式function saveAs(obj, fileName) &#123; var browserType = getBroswerType(); // 解决ie兼容性 if (browserType==&apos;IE&apos; || browserType==&apos;Edge&apos;) &#123; // IE浏览器兼容性 window.navigator.msSaveOrOpenBlob(obj, fileName); &#125;else if(browserType==&apos;FF&apos;) &#123; // 火狐浏览器兼容性 var url = window.URL.createObjectURL(obj); var a = document.createElement(&quot;a&quot;); document.body.appendChild(a); a.href = url; a.download = fileName; a.click(); &#125;else &#123; var tmpa = document.createElement(&quot;a&quot;); tmpa.download = fileName || &quot;下载&quot;; tmpa.href = URL.createObjectURL(obj); //绑定a标签 tmpa.click(); //模拟点击实现下载 &#125; setTimeout(function () &#123; //延时释放 URL.revokeObjectURL(obj); //用URL.revokeObjectURL()来释放这个object URL &#125;, 100);&#125;/*** [downloadExl 导出Excel]* @return &#123;[type]&#125; [description]*/var downloadName = &apos;&apos;;function downloadExl(type) &#123; if (queryResultExcelList.length &lt; 1) &#123; layer.msg(&apos;没有可导出数据&apos;); return; &#125; var wb = &#123; SheetNames: [], Sheets: &#123;&#125;, Props: &#123;&#125; &#125;; var excelData = getExcelDataByData(queryResultExcelList); if (excelData &amp;&amp; excelData.length &gt; 0) &#123; for (var i = 0; i &lt; excelData.length; i++) &#123; var excelObj = excelData[i]; var SheetName = excelObj.sheetName; var SheetList = excelObj.list; wb.SheetNames.push(SheetName); // 转成(Sheet)数据 wb.Sheets[SheetName] = XLSX.utils.json_to_sheet(SheetList); &#125; var arrayBuffer = s2ab(XLSX.write(wb, wopts)); saveAs(new Blob([arrayBuffer], &#123; type: &quot;application/octet-stream&quot; &#125;), downloadName + &apos;.&apos; + (wopts.bookType == &quot;biff2&quot; ? &quot;xls&quot; : wopts.bookType)); &#125;&#125;function s2ab(s) &#123; if (typeof ArrayBuffer !== &apos;undefined&apos;) &#123; var buf = new ArrayBuffer(s.length); var view = new Uint8Array(buf); for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) &amp; 0xFF; return buf; &#125; else &#123; var buf = new Array(s.length); for (var i = 0; i != s.length; ++i) buf[i] = s.charCodeAt(i) &amp; 0xFF; return buf; &#125;&#125;// ----------------- 导出excel公共方法区【结束】 ----------------------]]></content>
@@ -34,9 +23,20 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[【myql可以用localhost 连接，但不能用IP连接】的解决方法]]></title>
+    <url>%2F2019%2F07%2F13%2F%E3%80%90myql%E5%8F%AF%E4%BB%A5%E7%94%A8localhost_%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E4%B8%8D%E8%83%BD%E7%94%A8IP%E8%BF%9E%E6%8E%A5%E3%80%91%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[【myql可以用localhost 连接，但不能用IP连接】的解决方法MySQL localhost 连接，但不能用IP连接问题解决方案 1.打开cmd窗口，进入MySQL安装的bin目录 2.执行命令登录数据库,之后会出现一行要你输入密码的 mysql -u root -p 3.执行以下命令分配新用户： 1grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;xxx&apos;; （ps：xxx是root的密码） 4.执行完上述命令后用下面的命令刷新权限 1flush privileges; 5.之后关闭mysql服务，然后启动mysql服务，大功告成 6.举个栗子 12grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;123456&apos; with grant option;flush privileges;]]></content>
+      <categories>
+        <category>笔记类</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[搭建hexo个人博客笔记]]></title>
     <url>%2F2019%2F07%2F02%2F%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[准备环境需要安装node和git作为基础环境； 开始安装全局安装cnpm： 1npm install -g cnpm --registry=https://registry.npm.taobao.org 安装hexo环境： 1cnpm install -g hexo-cli 然后检查是否安装成功，查看版本号： 1hexo -v 安装hexo完成后，创建一个文件夹进行hexo的初始化操作： 1hexo init 常用命令首先要构建一下博客的静态页面： 1hexo g 启动hexo： 1hexo s 新建文章： 1hexo n &quot;我的第一篇博客&quot; 构建文章（把新建的文章更新上去）： 1hexo g 清理缓存： 1hexo clean 部署到github登录自己的github，然后新建一个仓库，此时需要注意一点，就是仓库的名称必须为自己的GitHub的昵称加github.io，比如我的wzlUp.github.io作为仓库名称。 打开本地的_config.yml文件，修改一下配置： 1234deploy: type: git repo: https://github.com/wzlUp/wzlUp.github.io.git branch: master 然后执行命令 hexo d 进行更新到GitHub的操作即可。]]></content>
+    <content type="text"><![CDATA[准备环境需要安装node和git作为基础环境； 开始安装全局安装cnpm： 1npm install -g cnpm --registry=https://registry.npm.taobao.org 安装hexo环境： 1cnpm install -g hexo-cli 然后检查是否安装成功，查看版本号： 1hexo -v 安装hexo完成后，创建一个文件夹进行hexo的初始化操作： 1hexo init 常用命令首先要构建一下博客的静态页面： 1hexo g 启动hexo： 1hexo s 新建文章： 在hexo下的任意目录执行以下命令： 1hexo n &quot;我的第一篇博客&quot; 执行该命令后会在_posts目录下生产新建的文件 构建文章（把新建的文章更新上去）： 1hexo g 清理缓存： 1hexo clean 部署到github登录自己的github，然后新建一个仓库，此时需要注意一点，就是仓库的名称必须为自己的GitHub的昵称加github.io，比如我的wzlUp.github.io作为仓库名称。 打开本地的_config.yml文件，修改一下配置： 1234deploy: type: git repo: https://github.com/wzlUp/wzlUp.github.io.git branch: master 然后执行命令 hexo d 进行更新到GitHub的操作即可。]]></content>
       <categories>
         <category>笔记类</category>
       </categories>
